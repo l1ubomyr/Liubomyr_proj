@@ -1,0 +1,794 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    background-color: #131313;
+}
+
+a {
+    text-decoration: none;
+}
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color:rgba( 0, 0, 0, 0.6);
+    z-index: 500;
+    position:absolute;
+    top: 0px;
+}
+
+#home {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
+
+header {
+    z-index: 1100;
+    padding-top: 10px; ;
+    background-color: rgba( 0, 0, 0, 0.6);
+    width: 100%;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.header_container {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 0px 15px 0px ;
+    max-width: 1600px;
+}
+
+.header_box {
+    padding: 0px 15px 0px 15px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header_button {
+    border: none;
+    width: 35px;
+    height: 35px;
+    background: url("../img/menu.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1100;
+    position:absolute;
+    top: 20px;
+    left: 50px;
+    display: none;
+}
+
+.header_button:focus {
+    outline: none;
+}
+
+.header_button_active {
+    background: url("../img/x-mark.svg");
+}
+
+.header_social_links {
+    display: flex;
+    align-items: center;
+}
+
+.header_tita {
+    display: block;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.header_social_link {
+    margin-left: 20px;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.nav_barr {
+    display: flex;
+    align-items: center;
+}
+
+.nav_barr_link{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    margin-right: 20px;
+}
+
+.heder_title_mabolie {
+    z-index: 600;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.home_conteiner {
+    background: url("../img/welcome.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 90%;
+    height: 553px;
+    margin: 0 auto;
+    border: 0px solid black;
+    border-radius: 15px;
+}
+
+.home_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba( 0, 0, 0, 0.6);
+    border: 0px solid black;
+    border-radius: 15px;
+}
+
+.home_img {
+    width: 50%;
+    z-index: 600;
+    margin: 0 auto;
+}
+
+.home_img img {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) 
+{
+    .header_button {display:inline-block;}
+    .header_box {
+        height: 100%;
+        position:absolute;
+        background-color: rgba( 0, 0, 0, 0.6);
+        width: 350px;
+        margin: 0px;
+        top: 0px;
+        left: -500px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .header_box_active{
+        transition: 1s linear;
+        left: 0px;
+    }
+    .heder_title_mabolie{
+        display: block;
+    }
+    .header_tita {
+        display: none;
+    }
+    .nav_barr_link {
+        padding-top: 15px;
+        font-size: 28px;
+        margin: 0px;
+    }
+    .nav_barr {
+        padding-bottom: 50px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+  }
+
+
+
+  /* секція_галерея */
+#gallery {
+    width: 100%;
+    background-color:#131313;
+    padding: 60px 15px 60px 15px;
+}
+
+.gallery_conteiner {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_box_1 {
+    z-index: 600;
+    background-color: white;
+    width:40% ;
+    height: 400px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.gallery_box_tatel_1{
+    font-weight: 500;
+    font-family: "Dancing Script";
+    color: #e8b932;
+    font-size: 50px;
+}
+
+.gallery_box_text_1 {
+    padding-top: 10px;
+    font-size: 48px;
+    color: black;
+}
+
+.gallery_box_text_2 {
+    text-align: end;
+    padding-top: 10px;
+    font-size: 16px;
+    color: #999999;
+}
+
+.gallery_box_link {
+   width: 150px;
+   height: 50px; 
+   border: 2px solid black;
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: 100;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: black;
+   margin-top: 25px;
+   cursor: pointer;
+}
+
+.gallery_box_link:hover {
+    color: white;
+    background-color: black;
+    transition: 0.65s;
+}
+
+.gallery_box_link:focus {
+    outline: none;
+}
+
+.gallery_box_2 {
+    width: 60%;
+    margin-left: -100px;
+    z-index: 500;
+}
+
+.gallery_box_2 img{
+    width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .gallery_box_1{ 
+        height: 300px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .gallery_conteiner {
+        flex-direction: column; 
+    }
+    .gallery_box_1 {
+        width: 100%;
+    }
+    .gallery_box_2  {
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .gallery_box_tatel_1 {
+        font-size: 35px;
+    }
+    .gallery_box_text_1{
+        font-size: 30px;
+    }
+    .gallery_box_text_2 {
+        font-size: 14px;
+    }
+}
+
+
+
+/* менюшка */
+
+#menu {
+    width: 100%;
+    background-color: #131313;
+    padding: 60px 0px;
+}
+
+.menu_conteiner {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1600px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu_title {
+    padding-bottom: 30px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.menu_title span {
+    font-family: "Dancing Script";
+    color: #e8b932;
+    font-size: 50px;
+}
+
+.menu_slider {
+    width: 100%;
+}
+
+.slider_item_menu {
+    background-color: white;
+    padding: 60px 10px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu_slider_box {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu_slider_info {
+    height: 125px;
+    border-bottom: 1px solid #999999 ;
+    margin-left: 35px;
+    padding-bottom: 10px;
+}
+
+.food_title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 20px;
+}
+
+.food_text {
+    color: #999999;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.1;
+    max-width: 471px;
+    display: flex;
+}
+
+.food_text span {
+    color: #e8b932;
+    font-size: 30px;
+    font-family: "Dancing Script";
+    margin-left: 60px;
+}
+
+.slick-arrow {
+    position:absolute;
+    background-color: white;
+    bottom: 50%;
+    border: none;
+    z-index: 500;
+    top:50%;
+    height: 30px;
+    width: 30px;
+    font-size: 0px;
+}
+
+.slick-arrow:focus {
+    outline: none;
+}
+
+.slick-arrow:hover {
+    opacity: 0.7;
+}
+
+.slick-next {
+    background-color: rgba( 0, 0, 0, 0.0);
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../img/rigth.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.slick-prev {
+    background-color: rgba( 0, 0, 0, 0.0);
+    background-image: url(../img/left.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 30px;
+}
+
+@media screen and (max-width: 1115px) {
+
+    .slick-arrow {
+        display: none !important;
+    }
+} 
+
+@media screen and (max-width: 785px) {
+    .slider_item_menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .food_text {
+        max-width: 100%;
+    }
+
+    .menu_slider_info{
+        margin-left: 0px;
+    }
+} 
+
+@media screen and (max-width: 375px) {
+    .food_text{
+        font-size: 12px;
+    }
+}
+
+
+/* замовлення */
+
+#reseved {
+    background-color:#131313 ;
+    width: 100%;
+    padding: 0px 15px 0px 15px;
+}
+
+.reseved_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 50px 10px;
+}
+
+.reseved_title {
+    font-weight: 500;
+    font-family: "Dancing Script";
+    color: #e8b932;
+    font-size: 50px;
+}
+
+.P_title{
+    padding-top: 20px;
+    font-size: 25px;
+    color: #999999;
+}
+
+.reserved_input {
+
+}
+
+.button_click {
+    width: 150px;
+    height: 50px; 
+    border: 2px solid black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.button_click:hover {
+    color: white;
+    background-color: black;
+    transition: 0.65s;
+    
+}
+
+.button_click:focus {
+    outline: none;
+}
+
+.reserved_model {
+    padding-top: 60px; ;
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:rgba( 0, 0, 0, 0.8);
+    z-index: 2000;
+}
+
+.reserved_model_active {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#reserved_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserved_input {
+    padding-left: 12px;
+    font-size: 16px;
+    width: 80%;
+    height: 40px;
+    border: 2px solid black;
+    margin: 10px 5px;
+}
+
+#comment {
+    height: 80px;
+}
+
+
+.reserved_form_date {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.reserved_form_button {
+    width: 150px;
+    height: 50px; 
+    border: 2px solid black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.reserved_form_button:hover {
+    color: white;
+    background-color: black;
+    transition: 0.65s;
+}
+
+.reserved_form_button:focus {
+    outline: none;
+}
+
+.exit {
+    width: 20px;
+    height: 20px;
+    background: url(../img/close.svg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+}
+
+/* блог */
+#blog {
+    width: 100%;
+    background-color: #131313;
+}
+
+.container-blog {
+    padding: 50px 15px 50px 15px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.blog_slider {
+    width: 100%;
+}
+
+.blog_slider_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 300px;
+    align-items: flex-start;
+    padding-left: 35px;
+}
+
+.slick_blog {
+    background-color: rgba( 0, 0, 0, 0.6);
+}
+
+.blog_item0 {
+    background: url(../img_galerry/blog1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog_item1 {
+    background: url(../img_galerry/blog2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog_item2 {
+    background: url(../img_galerry/blog3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog_item3 {
+    background: url(../img_galerry/blog4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog_item4 {
+    background: url(../img_galerry/blog5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* блог текст  */
+
+.blog_date {
+    background-color: #e8b932;
+    border-radius: 3px;
+    padding: 3px 7px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.blog_item_title {
+    font-weight: 500;
+    margin-bottom: 11px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.blog_item_text {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 11px;
+    color: #b3b3b3;
+}
+
+.blog_title {
+    text-transform: capitalize;
+    color: #ffffff;
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.blog_title span {    
+    font-family: "Dancing Script";
+    color: #e8b932;
+    text-align: center;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: #131313;
+}
+
+.conteiner_footer {
+    padding: 50px 15px 50px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.map {
+    width: 50%;
+    height: 400px;
+}
+
+.footer_inform_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 400px;
+}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_link {
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.coppiright {
+    color: #7a7a7a;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 785px) {
+    .conteiner_footer {
+        flex-direction: column;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .footer_inform_box {
+        width: 100%;
+        height: 200px;
+    }
+}
